@@ -1,17 +1,15 @@
 
-import dataProducts from "../data.json"
+
 
 function ProductRow(props) {
+    
     return( 
     <div className="table">
-            <table>
-            <tbody>
                     <tr>
-                        <td style={{color: !dataProducts.inStock ? "red" : "black"} }>{props.dataProducts.name}</td>
-                        <td>{props.dataProducts.price}</td>
+                        <td style={{color: !props.tables.inStock ? "red" : "black"} }>{props.tables.name}</td>
+                     
+                        <td style={{color: !props.tables.inStock ? "red" : "black"} }>{props.tables.price}</td>
                     </tr>
-                </tbody>
-            </table>
         </div>
         )
 }

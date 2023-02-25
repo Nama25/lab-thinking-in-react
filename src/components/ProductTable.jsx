@@ -1,9 +1,11 @@
 import ProductRow from './ProductRow';
-import { useState } from 'react';
+// import { useState } from 'react';
 
-function ProductTable() {
-  const [table, setTable] = useState('');
+function ProductTable(props) {
+  // const [table, setTable] = useState('');
+  console.log("Product table")
   return (
+   
     <div>
       <h3>Product List</h3>
       <table>
@@ -14,15 +16,14 @@ function ProductTable() {
           </tr>
         </thead>
         <tbody>
-          <tr>
-            {table.map((tables) => (
+            {props.products.map((tables) => 
               <ProductRow
                 key={tables.id}
-                name={tables.name}
-                price={tables.price}
+                tables={tables}
+                // name={tables.name}
+                // price={tables.price}
               />
-            ))}
-          </tr>
+            )}
         </tbody>
       </table>
     </div>
